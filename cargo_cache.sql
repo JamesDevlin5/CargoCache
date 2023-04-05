@@ -26,7 +26,7 @@ CREATE TABLE Rentees
     AccountNumber VARCHAR(20)         NOT NULL,
     AccountName   VARCHAR(40)         NOT NULL,
     PRIMARY KEY (AccountEmail),
-    CONSTRAINT fk_rentees_accounts FOREIGN KEY (AccountEmail) REFERENCES Accounts (Email)
+    CONSTRAINT fk_rentees_accounts FOREIGN KEY (AccountEmail) REFERENCES Accounts (Email) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE Units
@@ -46,7 +46,7 @@ CREATE TABLE Units
     -- Max Size = 9,999,999.999 ft^2
     Size                DECIMAL(10, 3),
     PRIMARY KEY (UnitID),
-    CONSTRAINT fk_units_rentees FOREIGN KEY (PrimaryAccountEmail) REFERENCES Rentees (AccountEmail)
+    CONSTRAINT fk_units_rentees FOREIGN KEY (PrimaryAccountEmail) REFERENCES Rentees (AccountEmail) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE UnitPictures
@@ -63,8 +63,8 @@ CREATE TABLE CoRenteeUnits
     UnitID       INT          NOT NULL,
     AccountEmail VARCHAR(100) NOT NULL,
     PRIMARY KEY (UnitID, AccountEmail),
-    CONSTRAINT fk_corenteeunits_units FOREIGN KEY (UnitID) REFERENCES Units (UnitID),
-    CONSTRAINT fk_corenteeunits_rentees FOREIGN KEY (AccountEmail) REFERENCES Rentees (AccountEmail)
+    CONSTRAINT fk_corenteeunits_units FOREIGN KEY (UnitID) REFERENCES Units (UnitID) ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT fk_corenteeunits_rentees FOREIGN KEY (AccountEmail) REFERENCES Rentees (AccountEmail) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE Attributes
@@ -79,8 +79,8 @@ CREATE TABLE AttributeUnit
     UnitID        INT         NOT NULL,
     AttributeName VARCHAR(20) NOT NULL,
     PRIMARY KEY (UnitID, AttributeName),
-    CONSTRAINT fk_attrunit_units FOREIGN KEY (UnitID) REFERENCES Units (UnitID),
-    CONSTRAINT fk_attrunit_attrs FOREIGN KEY (AttributeName) REFERENCES Attributes (Name)
+    CONSTRAINT fk_attrunit_units FOREIGN KEY (UnitID) REFERENCES Units (UnitID) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_attrunit_attrs FOREIGN KEY (AttributeName) REFERENCES Attributes (Name) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Renters
@@ -90,7 +90,7 @@ CREATE TABLE Renters
     CreditCardInfo   VARCHAR(5)   NOT NULL,
     ExpiryDate       DATE         NOT NULL,
     PRIMARY KEY (AccountEmail),
-    CONSTRAINT fk_renters_accounts FOREIGN KEY (AccountEmail) REFERENCES Accounts (Email)
+    CONSTRAINT fk_renters_accounts FOREIGN KEY (AccountEmail) REFERENCES Accounts (Email) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE Blocks
@@ -98,8 +98,8 @@ CREATE TABLE Blocks
     AccountEmail VARCHAR(100) NOT NULL,
     BlockedEmail VARCHAR(100) NOT NULL,
     PRIMARY KEY (AccountEmail, BlockedEmail),
-    CONSTRAINT fk_blocks_accounts FOREIGN KEY (AccountEmail) REFERENCES Accounts (Email),
-    CONSTRAINT fk_blocks_renters FOREIGN KEY (BlockedEmail) REFERENCES Renters (AccountEmail)
+    CONSTRAINT fk_blocks_accounts FOREIGN KEY (AccountEmail) REFERENCES Accounts (Email) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_blocks_renters FOREIGN KEY (BlockedEmail) REFERENCES Renters (AccountEmail) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE RenterWatchingUnits
@@ -107,8 +107,8 @@ CREATE TABLE RenterWatchingUnits
     UnitID       INT          NOT NULL,
     AccountEmail VARCHAR(100) NOT NULL,
     PRIMARY KEY (UnitID, AccountEmail),
-    CONSTRAINT fk_watchingunits_units FOREIGN KEY (UnitID) REFERENCES Units (UnitID),
-    CONSTRAINT fk_watchingunits_renters FOREIGN KEY (AccountEmail) REFERENCES Renters (AccountEmail)
+    CONSTRAINT fk_watchingunits_units FOREIGN KEY (UnitID) REFERENCES Units (UnitID) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_watchingunits_renters FOREIGN KEY (AccountEmail) REFERENCES Renters (AccountEmail) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Terms
@@ -125,7 +125,7 @@ CREATE TABLE Leases
     AccountEmail VARCHAR(100) NOT NULL,
     TermsID      INT          NOT NULL,
     PRIMARY KEY (UnitID, AccountEmail, TermsID),
-    CONSTRAINT fk_leases_units FOREIGN KEY (UnitID) REFERENCES Units (UnitID),
-    CONSTRAINT fk_leases_renters FOREIGN KEY (AccountEmail) REFERENCES Renters (AccountEmail),
-    CONSTRAINT fk_leases_terms FOREIGN KEY (TermsID) REFERENCES Terms (TermsID)
+    CONSTRAINT fk_leases_units FOREIGN KEY (UnitID) REFERENCES Units (UnitID) ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT fk_leases_renters FOREIGN KEY (AccountEmail) REFERENCES Renters (AccountEmail) ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT fk_leases_terms FOREIGN KEY (TermsID) REFERENCES Terms (TermsID) ON DELETE RESTRICT ON UPDATE CASCADE
 );
