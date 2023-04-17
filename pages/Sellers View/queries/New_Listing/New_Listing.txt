@@ -1,0 +1,10 @@
+{{{
+	"city": New_Listing_City.text,
+	"state": New_Listing_State.text,
+	"zip": New_Listing_Zip.text,
+	"unitNumber": New_Listing_Unit_Number.text,
+	"name": New_Listing_Name.text,
+	"description": New_Listing_Desc.text,
+	"price": New_Listing_Price.value,
+	"size": New_Listing_Size.text
+}}}

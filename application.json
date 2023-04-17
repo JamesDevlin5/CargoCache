@@ -3,6 +3,10 @@
     {
       "id": "Sellers View",
       "isDefault": true
+    },
+    {
+      "id": "Sellers Edit Listing",
+      "isDefault": false
     }
   ],
   "viewMode": false,

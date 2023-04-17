@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/s/listings/{{Active_Rentee.selectedRow.Email}}"
+        "url": "web:4000/s/listings/{{Select_Active_Seller.selectedOptionValue}}"
       },
       "invalids": [],
       "messages": [],
@@ -46,7 +46,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Active_Rentee.selectedRow.Email"
+      "Select_Active_Seller.selectedOptionValue"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
