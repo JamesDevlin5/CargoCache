@@ -115,7 +115,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1681771560632,
+              "columnUpdatedAt": 1681847877163,
               "originalBottomRow": 53,
               "defaultSelectedRowIndices": [
                 0
@@ -131,8 +131,8 @@
                 "State",
                 "Size",
                 "PrimaryAccountEmail",
-                "UnitID",
-                "UnitNumber"
+                "UnitNumber",
+                "UnitID"
               ],
               "dynamicPropertyPathList": [],
               "displayName": "Table",
@@ -853,6 +853,11 @@
               "minHeight": 410,
               "animateLoading": true,
               "parentColumnSpace": 13.75,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClose"
+                }
+              ],
               "leftColumn": 22,
               "dynamicBindingPathList": [
                 {
@@ -1674,6 +1679,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
+              "onClose": "{{All_Listings_Of_Owner.run()}}",
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
               "width": 456,
