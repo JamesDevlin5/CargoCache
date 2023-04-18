@@ -624,6 +624,9 @@
               "dynamicTriggerPathList": [
                 {
                   "key": "onOptionChange"
+                },
+                {
+                  "key": "onDropdownClose"
                 }
               ],
               "leftColumn": 16,
@@ -642,6 +645,7 @@
                 }
               ],
               "labelPosition": "Top",
+              "onDropdownClose": "{{All_Listings_Of_Owner.run()}}",
               "options": "{{All_Rentees.data.map( p => ({label: p.FirstName + \" \" + p.LastName, value: p.Email}))}}",
               "placeholderText": "Select option",
               "isDisabled": false,
@@ -663,7 +667,7 @@
               "responsiveBehavior": "fill",
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "onOptionChange": "{{All_Listings_Of_Owner.run()}}",
+              "onOptionChange": "",
               "minDynamicHeight": 4
             },
             {
@@ -781,6 +785,9 @@
               "dynamicTriggerPathList": [
                 {
                   "key": "onOptionChange"
+                },
+                {
+                  "key": "onDropdownClose"
                 }
               ],
               "leftColumn": 16,
@@ -799,6 +806,7 @@
                 }
               ],
               "labelPosition": "Top",
+              "onDropdownClose": "{{navigateTo('Sellers Edit Listing',{\"unitID\": Select_Active_Listing.selectedOptionValue}, 'SAME_WINDOW')}}",
               "options": "{{All_Listings_Of_Owner.data.map( p => ({label: p.Name, value: p.UnitID}))}}",
               "placeholderText": "Select option",
               "isDisabled": false,
@@ -822,7 +830,7 @@
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
               "originalBottomRow": 59,
-              "onOptionChange": "{{navigateTo('Sellers Edit Listing',{},'SAME_WINDOW')}}",
+              "onOptionChange": "",
               "minDynamicHeight": 4
             },
             {
