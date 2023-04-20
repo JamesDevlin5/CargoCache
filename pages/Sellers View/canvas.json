@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 77,
+          "version": 78,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -116,7 +116,7 @@
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "columnUpdatedAt": 1681847877163,
-              "originalBottomRow": 53,
+              "originalBottomRow": 42,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -453,7 +453,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "responsiveBehavior": "fill",
-              "originalTopRow": 30,
+              "originalTopRow": 16,
               "isVisiblePagination": true,
               "verticalAlignment": "CENTER"
             },
@@ -596,8 +596,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
+              "originalTopRow": 11,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
+              "originalBottomRow": 16,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
@@ -703,8 +705,8 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 48,
-              "originalBottomRow": 52
+              "originalTopRow": 42,
+              "originalBottomRow": 46
             },
             {
               "widgetName": "Text3",
@@ -755,10 +757,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 52,
+              "originalTopRow": 46,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 56,
+              "originalBottomRow": 50,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
@@ -826,10 +828,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 52,
+              "originalTopRow": 46,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 59,
+              "originalBottomRow": 53,
               "onOptionChange": "",
               "minDynamicHeight": 4
             },

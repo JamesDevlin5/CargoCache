@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 77,
+          "version": 78,
           "minHeight": 590,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -572,7 +572,7 @@
                 "label"
               ],
               "topRow": 4,
-              "bottomRow": 8,
+              "bottomRow": 9,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,

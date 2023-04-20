@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "All_Listings_Of_Owner",
+    "name": "All_Units",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/s/listings/{{Select_Active_Seller.selectedOptionValue}}"
+        "url": "web:4000/m/units"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Sellers View",
+    "pageId": "Moderators Delete Listing",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -37,23 +37,17 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "datasourceUrl"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "Select_Active_Seller.selectedOptionValue"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Sellers View_All_Listings_Of_Owner",
+  "id": "Moderators Delete Listing_All_Units",
   "deleted": false,
-  "gitSyncId": "643c9d56e027135de0f5b67f_643da9aa29a6ec7688361bba"
+  "gitSyncId": "644033b363ceb421be30827b_644033e163ceb421be308289"
 }

@@ -7,6 +7,10 @@
     {
       "id": "Sellers Edit Listing",
       "isDefault": false
+    },
+    {
+      "id": "Moderators Delete Listing",
+      "isDefault": false
     }
   ],
   "viewMode": false,
