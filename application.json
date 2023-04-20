@@ -11,6 +11,10 @@
     {
       "id": "Moderators Delete Listing",
       "isDefault": false
+    },
+    {
+      "id": "View Moderators Ban Users",
+      "isDefault": false
     }
   ],
   "viewMode": false,
